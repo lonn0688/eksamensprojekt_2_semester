@@ -3,6 +3,13 @@ header {
     text-align: center;
 }
 
+.banner img {
+     border: 1px solid white;
+
+}
+
+
+
 
 
 body,
@@ -14,7 +21,7 @@ html {
 }
 
 
-body {background-image: url(sakurabackground.png);
+body {background-color: black;
 
     }
 
@@ -71,7 +78,7 @@ article {
     display: none;
     top: 0;
     left: 0;
-    font-size: 20px;
+    font-size: 30px;
 
 
 
@@ -111,16 +118,17 @@ article {
 
 nav {
 
- font-family: lora, serif;
-    border: none;
+    font-family: 'Covered By Your Grace', serif;
+
     color: white;
 
     text-align: center;
-    font-size: 17px;
-    margin: 4px 2px;
+    font-size: 30px;
+    margin-top: 50px;
+
     opacity: 0.9;
     transition: 0.3s;
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
+    background: linear-gradient(to right, transparent, rgba(255,255,255), transparent);
 
 
 
@@ -128,26 +136,26 @@ nav {
 }
 
 Nav a {
-    color: #f2f2f2;
+    color: black;
 }
 
 Nav a:hover {
     color: red;
-    text-decoration: none;
+    text-decoration:none;
 }
 
 nav .menu-item {
 
-    font-family: lora, serif;
+    font-family: 'Covered By Your Grace', serif;
     border: none;
-    color: white;
+    color: black;
 
     text-align: center;
-    font-size: 17px;
+    font-size: 30px;
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
+    background-color: transparent;
 
 }
 
@@ -168,13 +176,13 @@ nav .menu-item {
 
 
 
-.section {
+.section { /* border rundt om slide på forsiden*/
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     width: 50%;
-    border: 3px solid black;
+    border: 10px solid white;
     position: relative;
     top: 60px;
     bottom: 100px;
