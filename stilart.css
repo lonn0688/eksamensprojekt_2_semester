@@ -1,0 +1,195 @@
+header {
+
+    text-align: center;
+}
+
+
+
+body,
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+
+body {background-image: url(sakurabackground.png);
+
+    }
+
+
+
+button a {
+    text-decoration: none;
+
+}
+
+
+
+article {
+    margin top: 30px;
+    /*parse error?*/
+    border: 3px solid black;
+
+    padding: 1em;
+    background-color: whitesmoke;
+
+}
+
+.data-container article img {
+    width: 100%;
+}
+
+.data-container {
+    margin: 0 auto;
+    display: grid;
+
+}
+
+
+
+
+
+@media screen and (min-width:580px) {
+    .data-container {
+        padding-left: 10%;
+        padding-right: 10%;
+        grid-gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+#modal {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    text-align: center;
+    font-family: lora, serif;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    display: none;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+
+
+
+}
+
+#modal-content {
+    width: 70vw;
+    height: 300vw;
+    margin: auto;
+    background-color: mistyrose;
+    padding-left: 1px;
+    border: 2px solid black;
+
+
+
+}
+
+#modal-content img {
+
+    max-height: 100%;
+    max-width: 100%;
+
+
+
+
+}
+
+
+#modal.vis {
+
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+
+nav {
+
+ font-family: lora, serif;
+    border: none;
+    color: white;
+
+    text-align: center;
+    font-size: 17px;
+    margin: 4px 2px;
+    opacity: 0.9;
+    transition: 0.3s;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
+
+
+
+
+}
+
+Nav a {
+    color: #f2f2f2;
+}
+
+Nav a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+nav .menu-item {
+
+    font-family: lora, serif;
+    border: none;
+    color: white;
+
+    text-align: center;
+    font-size: 17px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
+
+}
+
+
+
+.highlightindex {
+
+
+    padding: 5px, 10px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
+    width: 80%;
+    max-width: 800px;
+    margin: .3em auto 0;
+    font-weight: normal;
+}
+
+
+
+
+
+.section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 50%;
+    border: 3px solid black;
+    position: relative;
+    top: 60px;
+    bottom: 100px;
+
+}
+
+#footer {
+
+
+    text-align: center;
+    color: gray;
+    position: relative;
+    top: 60px;
+
+}
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stilart.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+
+    <link type="text/css" rel="stylesheet" media="screen" href="/css/jquery-sakura.min.css" />
+
+
+    <title>Galleri</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="banner"> <img src="nybanner.png" alt="banner" height="179px;" width="800px;"></div>
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+    <nav>
+        <button class="menu-item" data-nr="alle"><a href="index.html">Forside</a></button>
+
+        <button class="menu-item" data-kategori="alle">Alle værker</button>
+
+        <button class="menu-item" data-kategori="For 1 person">Filtrering 1</button>
+
+        <button class="menu-item" data-kategori="For 2 personer">Filtrering 2</button>
+
+        <button class="menu-item" data-kategori="Desserter">Filtrering 3</button>
+
+
+
+    </nav>
+
+
+
+
+    <section id="modal">
+        <button>Tilbage</button>
+
+        <div id="modal-content">
+            <h2 class="modal-navn"></h2>
+            <br>
+            <span class="modal-id"></span>
+            <span class="modal-kategori"></span>
+
+            <br>
+            <span class="modal-langbeskrivelse"></span>
+            <br>
+            <br> <span class="modal-pris"></span><br>
+            <img class="modal-billede" src="" alt="billede">
+
+        </div>
+    </section>
+
+
+    <main class="container">
+        <section class="data-container"></section>
+    </main>
+
+
+
+
+
+    <template class="data-template">
+      <article class="menu">
+          <h2></h2>
+          <img src="" alt=""><br>
+
+
+     <span class="data-kortbeskrivelse"></span><br>
+         <span class="data-pris"></span><br>
+
+      </article>
+   </template>
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <div id="footer">
+        <p>Kontakt 12345678 - Adr. xxxxxxx</p>
+    </div>
+
+
+
+
+</body>
+
+</html>
