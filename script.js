@@ -1,91 +1,35 @@
-let modal = document.querySelector("#modal");
-        let dest = document.querySelector(".data-container"),
-            retter,
-            kategoriFilter = "alle";
+let dest = document.querySelector("[data-container]");
+let posts = [];
+
+document.addEventListener("DOMContentLoaded", hentJson);
+
+async function hentJson() {
+    let jsonData = await fetch ("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/multiple-post-type?&type[]=malerier&type[]=print&type[]=brugskunst&per_page=50");
+    posts = await jsonData.json();
+    visPosts();
+}
+
+function visPosts() {
+    console.log(posts);
+    let dest = document.querySelector("[data-container]"),
+
+    temp = document.querySelector("[data-template]");
+
+    let postContainer = document.querySelector("[data-container]");
+
+    posts.forEach(post => {
+        let klon = temp.cloneNode(true).content;
+         klon.querySelector("[data-title]").textContent = post.title.rendered
+
+        klon.querySelector("[data-text]").innerHTML = post.content.rendered
+
+        klon.querySelector("[data-billede]").src = post.acf.billede.url
+                    postContainer.appendChild(klon);
 
 
-        document.addEventListener("DOMContentLoaded", hentJson);
-
-        async function hentJson() {
-            let myJson = await fetch("menu1.json");
-            retter = await myJson.json();
-
-
-
-
-
-
-            visRetter();
-            console.log(retter);
-        }
-
-
-        document.querySelectorAll(".menu-item").forEach(knap => {
-
-
-            knap.addEventListener("click", filtrering)
-        });
-
-
-        function filtrering() {
-            dest.textContent = "";
-            kategoriFilter = this.getAttribute("data-kategori");
-            visRetter();
-        }
-
-        function visRetter() {
-            let dest = document.querySelector(".data-container"),
-                temp = document.querySelector(".data-template");
-
-
-            //løb listen igennem og lav en klon LOOP
-            retter.forEach(ret => {
-
-                if (ret.Kategori == kategoriFilter || kategoriFilter == "alle") {
-                    let klon = temp.cloneNode(true).content;
-                    //indsæt data i klonen
-
-
-                    klon.querySelector("h2").textContent = ret.Navn;
-                    klon.querySelector("img").src = "billeder/small/" + ret.Billede + ".png";
-                     klon.querySelector("img").addEventListener("click", () => {
-                        visModal(ret);
-                    });
-
-
-                    // klon.querySelector(".data-kategori").textContent = ret.kategori;
-                    klon.querySelector(".data-pris").textContent = ret.Pris;
-                    klon.querySelector(".data-kortbeskrivelse").textContent = ret.KortBeskrivelse;
-
-                    //placer klon i DOM
-                    dest.appendChild(klon);
-                }
-            })
-        }
-
-
-        function visModal(retten) {
-            modal.classList.add("vis");
-            //modal.querySelector(".modal-id").textContent = retten.id;
-            modal.querySelector(".modal-kategori").textContent = retten.Kategori;
-            modal.querySelector(".modal-navn").textContent = retten.Navn;
-            modal.querySelector(".modal-pris").textContent = retten.Pris;
-            modal.querySelector(".modal-langbeskrivelse").textContent = retten.LangBeskrivelse;
-            modal.querySelector(".modal-billede").src = "billeder/small/" + retten.Billede + ".png";
-            modal.querySelector(".modal-billede").alt = "Foto af" + retten.Billede;
-            modal.querySelector("button").addEventListener("click", skjulModal);
-        }
-
-        function skjulModal() {
-            modal.classList.remove("vis");
-        }
-
-
-
-
-
-
-
+       /* !!!!!! + mål, pris osv !!!!!!!!!*/
+    });
+}
 
 let myIndex = 0;
 carousel();
@@ -102,8 +46,3 @@ function carousel() {
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
-
-
-
-
-//blomster//
