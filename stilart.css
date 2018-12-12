@@ -26,7 +26,7 @@ html {
 
 body {
     background-color: black;
-    background-image: url(spraymalingpletter-01.png);
+    background-image: url(baggrundspletter-01.png);
 }
 
 
@@ -230,7 +230,7 @@ nav .menu-item {
 .om {
     margin: 1em 3em 3em 3em;
     padding: .3em 1.5em 1.5em 1.5em;
-    background-color: black;
+    background-color: transparent;;
     margin: auto;
     width: 60%;
     padding: 10px;
