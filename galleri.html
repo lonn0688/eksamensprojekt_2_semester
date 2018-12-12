@@ -29,7 +29,7 @@
 
 
 
-!!!!!denne skal laves om så det passer med WB!!!!!!!!
+    !!!!!denne skal laves om så det passer med WB!!!!!!!!
 
     <nav>
         <button class="menu-item" data-nr="forside"><a href="index_forside.html">Forside</a></button>
@@ -52,30 +52,30 @@
 
     <main>
 
-        <section class="container-data">
-
-            <div class="container" data-container>
+        <section id="modal">
+            <button>Luk</button>
+            <div id="modal-content">
+                <h2 class="modal-title"></h2>
+                    <img class="modal-billede" src="" alt="">
+                    <div class="modal-txt">
+                        <div class="modal-text"></div>
+                        <div class="modal-maal"></div>
+                        <div class="modal-pris"></div>
+                    </div>
 
             </div>
         </section>
+
+        <section class="container-data">
+
+            <div class="container" data-container>
+            </div>
+        </section>
+
         <template data-template>
-
             <article class="postListview">
-
-
-                    <h2 data-title></h2>
-                    <img data-billede class="data-billede">
-
-                    <div class="txt">
-
-                    <div data-text></div>
-
-
-                </div>
-
-
+                <img data-billede class="data-billede">
             </article>
-
         </template>
 
     </main>

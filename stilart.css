@@ -1,17 +1,15 @@
 img {
     width: 100%;
+    height: auto;
 }
 
 
 header {
-
     text-align: center;
 }
 
 .banner img {
-     border: 1px solid white;
-    width: auto;
-
+    border: 1px solid white;
 }
 
 
@@ -26,89 +24,76 @@ html {
 }
 
 
-body {background-color: black;
-
-    }
+body {
+    background-color: black;
+    background-image: url(spraymalingpletter-01.png);
+}
 
 
 
 button a {
     text-decoration: none;
-
 }
 
 
 
 article {
-    margin top: 30px;
+    margin: 7em 3em 3em 3em;
+    ;
     /*parse error?*/
-    border: 3px solid black;
-
-    padding: 1em;
+    padding: .3em 1.5em 1.5em 1.5em;
+    ;
     background-color: whitesmoke;
-
 }
 
-.data-container article img {
-    width: 100%;
-}
 
 .data-container {
     margin: 0 auto;
     display: grid;
-
-}
-
-
-
-
-
-@media screen and (min-width:580px) {
-    .data-container {
-        padding-left: 10%;
-        padding-right: 10%;
-        grid-gap: 15px;
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 #modal {
     width: 100vw;
-    height: 100vw;
+    height: auto;
     position: fixed;
-    text-align: center;
-    font-family: lora, serif;
     letter-spacing: 1.5px;
     line-height: 1.5;
     display: none;
-    top: 0;
-    left: 0;
     font-size: 30px;
+}
 
+#modal h2 {
+    text-align: center;
+    font-family: 'Covered By Your Grace', serif;
+    font-size: 5em;
+    margin: 0;
+    padding: 0;
+}
 
-
+#modal button {
+    font-family: 'Covered By Your Grace', serif;
+    background-color: transparent;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3em;
+    border: none;
 }
 
 #modal-content {
-    width: 70vw;
-    height: 300vw;
-    margin: auto;
+    width: auto;
+    height: auto;
     background-color: mistyrose;
     padding-left: 1px;
     border: 2px solid black;
-
-
-
+    padding: 1em;
+    font-family: century gothic, sans-serif;
 }
 
 #modal-content img {
-
     max-height: 100%;
     max-width: 100%;
-
-
-
-
 }
 
 
@@ -124,20 +109,13 @@ article {
 nav {
 
     font-family: 'Covered By Your Grace', serif;
-
     color: white;
-
     text-align: center;
     font-size: 30px;
     margin-top: 50px;
-
     opacity: 0.9;
     transition: 0.3s;
-    background: linear-gradient(to right, transparent, rgba(255,255,255), transparent);
-
-
-
-
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255), transparent);
 }
 
 Nav a {
@@ -146,7 +124,7 @@ Nav a {
 
 Nav a:hover {
     color: red;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 nav .menu-item {
@@ -154,21 +132,17 @@ nav .menu-item {
     font-family: 'Covered By Your Grace', serif;
     border: none;
     color: black;
-
     text-align: center;
     font-size: 30px;
     margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
     background-color: transparent;
-
 }
 
 
 
 .highlightindex {
-
-
     padding: 5px, 10px;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
     width: 80%;
@@ -181,7 +155,8 @@ nav .menu-item {
 
 
 
-.section { /* border rundt om slide på forsiden*/
+.section {
+    /* border rundt om slide på forsiden*/
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -191,18 +166,67 @@ nav .menu-item {
     position: relative;
     top: 60px;
     bottom: 100px;
-
 }
 
 #footer {
-
-
     text-align: center;
     color: gray;
     position: relative;
     top: 60px;
+}
+
+
+/* !!!!!!!!!!!! TABLET !!!!!!!!!!!! */
+
+@media screen and (min-width:700px) {
+
+    .banner img {
+        width: 79%;
+        height: auto;
+    }
+
+    .container-data {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+
+    article {
+        padding: .5em;
+    }
+
+
+
+    #modal h2 {
+        font-size: 2em;
+    }
+
+    #modal button {
+        font-size: 1em;
+    }
+
+    #modal-content {
+        width: 70%;
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
 
 
+/* !!!!!!!!!!!!!!! PC !!!!!!!!!!!!!!!! */
 
+@media (min-width: 1023px) {
+    .container-data {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    #modal-content {
+        width: 50%;
+    }
+}
