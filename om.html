@@ -43,14 +43,13 @@
 
     <section class="container-data container" data-container>
 
+        <article class="om">
+            <h1 data-title></h1>
+            <p data-text></p>
+        </article>
+
     </section>
 
-    <template data-template>
-        <article class="om">
-            <h1></h1>
-            <p></p>
-        </article>
-    </template>
 
 
 
@@ -72,32 +71,34 @@
 
 
     <script>
-        let dest = document.querySelector("[data-container]");
-        let posts = [];
+
+        let page;
 
         document.addEventListener("DOMContentLoaded", hentJson);
 
         async function hentJson() {
             let jsonData = await fetch("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/posts/41");
-            posts = await jsonData.json();
+            page = await jsonData.json();
             visOmtekst();
         }
 
         function visOmtekst() {
-            console.log(posts)
+            console.log(page)
 
-            let dest = document.querySelector("[data-container]"),
+           // let dest = document.querySelector("[data-container]"),
 
-                temp = document.querySelector("[data-template]");
+              //  temp = document.querySelector("[data-template]");
 
-            let postContainer = document.querySelector("[data-container]");
+           // let postContainer = document.querySelector("[data-container]");
 
 
-                let klon = temp.cloneNode(true).content;
-                klon.querySelector("[data-title]").textContent = post.title.rendered
+               // let klon = temp.cloneNode(true).content;
+                document.querySelector("[data-title]").textContent = page.title.rendered
 
-                klon.querySelector("[data-text]").innerHTML = post.content.rendered
+                document.querySelector("[data-text]").innerHTML = page.content.rendered
 
+
+            //postContainer.appendChild(klon)
         }
 
     </script>
