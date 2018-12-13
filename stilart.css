@@ -3,7 +3,6 @@ img {
     height: auto;
 }
 
-
 header {
     text-align: center;
 }
@@ -11,9 +10,6 @@ header {
 .banner img {
     border: 1px solid white;
 }
-
-
-
 
 body,
 html {
@@ -23,13 +19,10 @@ html {
     padding: 0;
 }
 
-
 body {
     background-color: black;
     background-image: url(baggrundspletter-01.png);
 }
-
-
 
 button a {
     text-decoration: none;
@@ -53,8 +46,6 @@ button a {
     text-decoration: none;
 }
 
-
-
 .h1-galleri {
     color: white;
     text-align: center;
@@ -71,11 +62,6 @@ article {
 
 }
 
-
-
-
-
-
 .data-container {
     margin: 0 auto;
     display: grid;
@@ -83,17 +69,18 @@ article {
 
 #modal {
     width: 100vw;
-    height: auto;
-    position: absolute;
+    height: 100vh;
+    position:fixed;
     letter-spacing: 1.5px;
     line-height: 1.5;
     display: none;
-    font-size: 30px;
+    font-size: 40px;
     opacity: 0;
     pointer-events: none;
     transition: 1s;
     top: 10px;
     z-index: 1;
+    overflow: scroll;
 }
 
 #modal h2 {
@@ -123,6 +110,7 @@ article {
     border: 2px solid black;
     padding: 1em;
     font-family: century gothic, sans-serif;
+    position:relative;
 }
 
 #modal-content img {
@@ -147,10 +135,9 @@ article {
     transition: 0.5s;
 }
 
-
-
 .container-data {
-    display: grid;
+        grid-gap: 10px;
+        display: grid;
 }
 
 nav {
@@ -187,8 +174,6 @@ nav .menu-item {
     background-color: transparent;
 }
 
-
-
 .highlightindex {
     padding: 5px 10px;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
@@ -197,10 +182,6 @@ nav .menu-item {
     margin: .3em auto 0;
     font-weight: normal;
 }
-
-
-
-
 
 .section {
     /* border rundt om slide på forsiden*/
@@ -232,6 +213,7 @@ nav .menu-item {
 video {
     width: 100%;
 }
+
 /* !!!!!!!!!!!!! OM !!!!!!!!!!!! */
 
 .om {
@@ -244,7 +226,7 @@ video {
 
 /* !!!!!!!!!!!! TABLET !!!!!!!!!!!! */
 
-@media screen and (min-width:700px) {
+@media (min-width: 760px) {
 
     .banner img {
         width: 79%;
@@ -254,6 +236,7 @@ video {
     .container-data {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
+        display: grid;
 
     }
 
@@ -262,7 +245,8 @@ video {
     }
 
     #modal {
-
+        width: 100vw;
+        height: 100vw;
     }
 
     #modal h2 {
@@ -281,23 +265,32 @@ video {
     }
 
     .modal-txt {
-        font-size: .55em;
+        font-size: .4em;
     }
 }
 
 
 /* !!!!!!!!!!!!!!! PC !!!!!!!!!!!!!!!! */
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
     .container-data {
         grid-template-columns: repeat(4, 1fr);
-
         grid-gap: 10px;
     }
 
     #modal-content {
-        width: 25%;
-        height: 25%;
+  width: 50vw;
+        height: auto;
+    }
 
+    #modal {
+    width: 100vw;
+    height: 100vh;
+
+      margin: auto;
+    }
+
+    .modal-txt {
+        font-size: .35em;
     }
 }
