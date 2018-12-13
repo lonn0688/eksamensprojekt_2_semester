@@ -41,16 +41,18 @@
     </div>
 
 
-<article class="om">
+    <section class="container-data container" data-container>
 
-                    <h1>Sandra Wolff</h1>
+    </section>
 
-                    <p>Doggo ipsum floofs wrinkler pupper, heckin good boys and girls. Very hand that feed shibe heckin angery woofer puggorino long water shoob bork, smol heckin. Very jealous pupper wow such tempt shoober clouds wrinkler he made many woofs doge, shibe dat tungg tho heck very hand that feed shibe.
-
-
-                    <p>    long woofer doggo big ol. Vvv snoot you are doing me a frighten shoob borking doggo most angery pupper I have ever seen, adorable doggo smol borking doggo with a long snoot for pats much ruin diet. You are doin me a concern thicc puggorino borkf shibe waggy wags shoob, fluffer puggo thicc ur givin me a spook. Super chub long water shoob sub woofer you are doing me the shock ur givin me a spook lotsa pats adorable doggo, shibe shoober long water shoob woofer.</p><p> Most angery pupper I have ever seen waggy wags smol heck you are doing me the shock, long bois he made many woofs. H*ck smol borking doggo with a long snoot for pats puggorino clouds doggorino borking doggo, he made many woofs pats snoot. You are doin me a concern porgo extremely cuuuuuute long doggo, bork heckin good boys.</p>
-
+    <template data-template>
+        <article class="om">
+            <h1></h1>
+            <p></p>
         </article>
+    </template>
+
+
 
 
 
@@ -69,7 +71,36 @@
 
 
 
-    <script src="script.js"></script>
+    <script>
+        let dest = document.querySelector("[data-container]");
+        let posts = [];
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let jsonData = await fetch("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/posts/41");
+            posts = await jsonData.json();
+            visOmtekst();
+        }
+
+        function visOmtekst() {
+            console.log(posts)
+
+            let dest = document.querySelector("[data-container]"),
+
+                temp = document.querySelector("[data-template]");
+
+            let postContainer = document.querySelector("[data-container]");
+
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("[data-title]").textContent = post.title.rendered
+
+                klon.querySelector("[data-text]").innerHTML = post.content.rendered
+
+        }
+
+    </script>
 
     <div id="footer">
         <p>Kontakt 12345678 - Adr. xxxxxxx</p>
