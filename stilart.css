@@ -66,7 +66,6 @@ button a {
 
 article {
     margin: 7em 3em 3em 3em;
-    /*parse error?*/
     padding: .3em 1.5em 1.5em 1.5em;
     background-color: whitesmoke;
 }
@@ -230,7 +229,7 @@ nav .menu-item {
 .om {
     margin: 1em 3em 3em 3em;
     padding: .3em 1.5em 1.5em 1.5em;
-    background-color: transparent;;
+    background-color: transparent;
     margin: auto;
     width: 60%;
     padding: 10px;
