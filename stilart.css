@@ -26,7 +26,7 @@ html {
 
 body {
     background-color: black;
-    background-image: url(spraymalingpletter-01.png);
+    background-image: url(baggrundspletter-01.png);
 }
 
 
@@ -35,14 +35,39 @@ button a {
     text-decoration: none;
 }
 
+h1 {
+    font-family: 'covered by your grace';
+    color: white;
+    font-size: 5em;
+    margin: 0;
+    text-align: center;
+}
 
+p {
+    color: white;
+    font-family: century gothic, sans-serif;
+
+}
+
+button a {
+    text-decoration: none;
+}
+
+
+
+.h1-galleri {
+    color: white;
+    text-align: center;
+    font-family: 'Covered By Your Grace', serif;
+    font-size: 5em;
+    margin: 0;
+    margin-top: .8em;
+}
 
 article {
     margin: 7em 3em 3em 3em;
-    ;
     /*parse error?*/
     padding: .3em 1.5em 1.5em 1.5em;
-    ;
     background-color: whitesmoke;
 }
 
@@ -60,6 +85,10 @@ article {
     line-height: 1.5;
     display: none;
     font-size: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    top: 10px;
 }
 
 #modal h2 {
@@ -96,15 +125,28 @@ article {
     max-width: 100%;
 }
 
+.modal-txt {
+    padding: 0em 4em;
+    color: black;
+}
+
+.modal-txt p {
+    color: black;
+}
 
 #modal.vis {
 
     display: block;
     opacity: 1;
     pointer-events: all;
-
+    transition: 0.5s;
 }
 
+
+
+.container-data {
+    display: grid;
+}
 
 nav {
 
@@ -175,6 +217,25 @@ nav .menu-item {
     top: 60px;
 }
 
+/*Youtube video*/
+.hs-responsive-embed-youtube {
+    margin: auto;
+    width:40%;
+    padding: 10px;
+
+
+}
+/* !!!!!!!!!!!!! OM !!!!!!!!!!!! */
+
+.om {
+    margin: 1em 3em 3em 3em;
+    padding: .3em 1.5em 1.5em 1.5em;
+    background-color: transparent;;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
 
 /* !!!!!!!!!!!! TABLET !!!!!!!!!!!! */
 
@@ -186,17 +247,18 @@ nav .menu-item {
     }
 
     .container-data {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
-    }
 
+    }
 
     article {
         padding: .5em;
     }
 
+    #modal {
 
+    }
 
     #modal h2 {
         font-size: 2em;
@@ -208,12 +270,14 @@ nav .menu-item {
 
     #modal-content {
         width: 70%;
-        height: 100%;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
+    .modal-txt {
+        font-size: .55em;
+    }
 }
 
 
@@ -221,12 +285,14 @@ nav .menu-item {
 
 @media (min-width: 1023px) {
     .container-data {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+
         grid-gap: 10px;
     }
 
     #modal-content {
         width: 50%;
+        height: 50%;
+
     }
 }
