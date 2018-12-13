@@ -68,7 +68,12 @@ article {
     margin: 7em 3em 3em 3em;
     padding: .3em 1.5em 1.5em 1.5em;
     background-color: whitesmoke;
+
 }
+
+
+
+
 
 
 .data-container {
@@ -79,7 +84,7 @@ article {
 #modal {
     width: 100vw;
     height: auto;
-    position: fixed;
+    position: absolute;
     letter-spacing: 1.5px;
     line-height: 1.5;
     display: none;
@@ -88,6 +93,7 @@ article {
     pointer-events: none;
     transition: 1s;
     top: 10px;
+    z-index: 1;
 }
 
 #modal h2 {
@@ -184,7 +190,7 @@ nav .menu-item {
 
 
 .highlightindex {
-    padding: 5px, 10px;
+    padding: 5px 10px;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
     width: 80%;
     max-width: 800px;
@@ -219,16 +225,16 @@ nav .menu-item {
 /*Youtube video*/
 .hs-responsive-embed-youtube {
     margin: auto;
-    width:40%;
     padding: 10px;
+    width: 40%;
+}
 
-
+video {
+    width: 100%;
 }
 /* !!!!!!!!!!!!! OM !!!!!!!!!!!! */
 
 .om {
-    margin: 1em 3em 3em 3em;
-    padding: .3em 1.5em 1.5em 1.5em;
     background-color: transparent;
     margin: auto;
     width: 60%;
@@ -290,8 +296,8 @@ nav .menu-item {
     }
 
     #modal-content {
-        width: 50%;
-        height: 50%;
+        width: 25%;
+        height: 25%;
 
     }
 }
