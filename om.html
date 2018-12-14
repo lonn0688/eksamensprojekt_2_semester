@@ -38,14 +38,11 @@
 
             <button class="menu-item" data-kategori="alle"><a href="om.html">Om</a></button>
 
-
-
-
         </nav>
     </div>
 
 
-    <section class="container-data container" data-container>
+    <section class="containerom">
 
         <article class="om">
             <h1 data-title></h1>
@@ -55,27 +52,13 @@
     </section>
 
 
-
-
-
-
-
     <div class="hs-responsive-embed-youtube">
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/WOUuWWYZo4c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
 
-
-
-
-
-
-
-
-
     <script>
-
         let page;
 
         document.addEventListener("DOMContentLoaded", hentJson);
@@ -89,21 +72,14 @@
         function visOmtekst() {
             console.log(page)
 
-           // let dest = document.querySelector("[data-container]"),
 
-              //  temp = document.querySelector("[data-template]");
+            document.querySelector("[data-title]").textContent = page.title.rendered
 
-           // let postContainer = document.querySelector("[data-container]");
-
-
-               // let klon = temp.cloneNode(true).content;
-                document.querySelector("[data-title]").textContent = page.title.rendered
-
-                document.querySelector("[data-text]").innerHTML = page.content.rendered
+            document.querySelector("[data-text]").innerHTML = page.content.rendered
 
 
-            //postContainer.appendChild(klon)
         }
+<<<<<<< HEAD
 
         // BURGER
 
@@ -113,10 +89,12 @@ function burgerFunction(x) {
 }
 
 
+=======
+>>>>>>> origin/master
     </script>
 
     <div id="footer">
-        <p>Kontakt 12345678 - Adr. xxxxxxx</p>
+        <p>Sandra Wolff</p>
     </div>
 
 
