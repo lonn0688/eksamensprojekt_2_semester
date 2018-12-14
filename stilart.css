@@ -249,12 +249,10 @@ nav .menu-item {
 .hs-responsive-embed-youtube {
     margin: auto;
     padding: 10px;
-    width: 40%;
-}
-
-video {
     width: 100%;
 }
+
+
 
 /* !!!!!!!!!!!!! OM !!!!!!!!!!!! */
 
@@ -336,4 +334,10 @@ video {
     .modal-txt {
         font-size: .35em;
     }
+    .video{
+        margin: auto;
+    padding: 10px;
+    width: 60%;
+    }
+
 }
