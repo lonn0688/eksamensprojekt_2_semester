@@ -3,6 +3,11 @@ img {
     height: auto;
 }
 
+
+
+
+
+
 header {
     text-align: center;
 }
@@ -55,11 +60,12 @@ button a {
     margin-top: .8em;
 }
 
+/*mette's*/
 article {
-    margin: 7em 3em 3em 3em;
+
+  margin: 7em 3em 3em 3em;
     padding: .3em 1.5em 1.5em 1.5em;
     background-color: whitesmoke;
-
 }
 
 .data-container {
@@ -252,6 +258,7 @@ video {
 
 /* !!!!!!!!!!!!! OM !!!!!!!!!!!! */
 
+/*Lonni's - article*/
 .om {
     background-color: transparent;
     margin: auto;
