@@ -13,7 +13,7 @@ header {
 }
 
 .banner img {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
 
 body,
@@ -35,15 +35,15 @@ button a {
 
 h1 {
     font-family: 'covered by your grace';
-    color: white;
+    color: grey;
     font-size: 5em;
     margin: 0;
     text-align: center;
 }
 
 p {
-    color: white;
-    font-family: century gothic, sans-serif;
+    color: grey;
+    font-family: 'century gothic pro', sans-serif;
 
 }
 
@@ -52,7 +52,7 @@ button a {
 }
 
 .h1-galleri {
-    color: white;
+    color: grey;
     text-align: center;
     font-family: 'Covered By Your Grace', serif;
     font-size: 5em;
@@ -65,7 +65,7 @@ article {
 
   margin: 7em 3em 3em 3em;
     padding: .3em 1.5em 1.5em 1.5em;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .data-container {
@@ -74,8 +74,7 @@ article {
 }
 
 #modal {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     position:fixed;
     letter-spacing: 1.5px;
     line-height: 1.5;
@@ -87,7 +86,11 @@ article {
     top: 10px;
     z-index: 1;
     overflow: scroll;
+    grid-template-columns: repeat 1fr;
+    display: grid;
 }
+
+
 
 #modal h2 {
     text-align: center;
@@ -115,7 +118,7 @@ article {
     padding-left: 1px;
     border: 2px solid black;
     padding: 1em;
-    font-family: century gothic, sans-serif;
+    font-family: 'century gothic pro', sans-serif;
     position:relative;
 }
 
@@ -152,10 +155,15 @@ nav {
     color: white;
     text-align: center;
     font-size: 30px;
-    margin-top: 50px;
     opacity: 0.9;
     transition: 0.3s;
     background: linear-gradient(to right, transparent, rgba(255, 255, 255), transparent);
+    max-height: 0;
+    overflow: hidden;
+}
+
+nav.show {
+    max-height: 500px;
 }
 
 Nav a {
@@ -168,7 +176,6 @@ Nav a:hover {
 }
 
 nav .menu-item {
-
     font-family: 'Covered By Your Grace', serif;
     border: none;
     color: black;
@@ -216,6 +223,8 @@ nav .menu-item {
     cursor: pointer;
 }
 
+
+
 .highlightindex {
     padding: 5px 10px;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
@@ -232,7 +241,7 @@ nav .menu-item {
     margin-right: auto;
     margin-bottom: 50px;
     width: 50%;
-    border: 10px solid white;
+    border: 10px solid grey;
     position: relative;
     top: 60px;
     bottom: 100px;
@@ -243,6 +252,7 @@ nav .menu-item {
     color: gray;
     position: relative;
     top: 60px;
+    font-size: 10px;
 }
 
 /*Youtube video*/
@@ -254,13 +264,44 @@ nav .menu-item {
 
 
 
+/* !!!!!!!!!!!! Burgermenu !!!!!!!!!! */
+
+.burger-container {
+  display: inline-block;
+  cursor: pointer;
+margin: 4em 0 1em 3em
+}
+
+.burger1, .burger2, .burger3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .burger1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .burger2 {
+  opacity: 0;
+}
+
+.change .burger3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
 /* !!!!!!!!!!!!! OM !!!!!!!!!!!! */
 
 /*Lonni's - article*/
 .om {
     background-color: transparent;
     margin: auto;
-    width: 60%;
+    width: 40%;
     padding: 10px;
 }
 
@@ -278,7 +319,6 @@ nav .menu-item {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         display: grid;
-
     }
 
     article {
@@ -286,8 +326,7 @@ nav .menu-item {
     }
 
     #modal {
-        width: 100vw;
-        height: 100vw;
+
     }
 
     #modal h2 {
@@ -327,17 +366,31 @@ nav .menu-item {
     #modal {
     width: 100vw;
     height: 100vh;
-
-      margin: auto;
+    margin: auto;
     }
 
     .modal-txt {
         font-size: .35em;
     }
-    .video{
-        margin: auto;
-    padding: 10px;
-    width: 60%;
+
+
+    .burger-container {
+        display: none;
     }
 
+    nav {
+        max-height: 200px;
+        margin-top: 4em;
+    }
+
+    .video{
+    margin: auto;
+    padding: auto;
+    width: 95%;
+
+    }
+
+
 }
+
+

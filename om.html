@@ -16,7 +16,7 @@
 <body>
 
     <header>
-        <div class="banner"> <img src="nybanner-01.png" alt="banner" height="230px;" width="1200px;"></div>
+        <div class="banner"> <img src="nybanner14dec-01.png" alt="banner" height="230px;" width="1200px;"></div>
 
 
 
@@ -24,7 +24,11 @@
 
     </header>
 
-
+<div class="burger-container" onclick="burgerFunction(this)">
+<div class="burger1"></div>
+<div class="burger2"></div>
+<div class="burger3"></div>
+    </div>
 
     <div id="nav" class="highlightindex">
         <nav>
@@ -71,6 +75,14 @@
 
 
         }
+
+        // BURGER
+
+function burgerFunction(x) {
+    x.classList.toggle("change");
+     document.querySelector("nav").classList.toggle("show");
+}
+
     </script>
 
     <div id="footer">
