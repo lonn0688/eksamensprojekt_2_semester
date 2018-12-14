@@ -159,6 +159,7 @@ nav {
     transition: 0.3s;
     background: linear-gradient(to right, transparent, rgba(255, 255, 255), transparent);
     max-height: 0;
+    overflow: hidden;
 }
 
 nav.show {

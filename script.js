@@ -1,7 +1,22 @@
 let dest = document.querySelector("[data-container]");
 let posts = [];
+let page = [];
 let modal = document.querySelector("#modal");
 
+
+    document.addEventListener("DOMContentLoaded", hentJson2);
+
+        async function hentJson2() {
+            let jsonData2 = await fetch("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/posts/93");
+            page = await jsonData2.json();
+            visGalleriH1();
+        }
+
+        function visGalleriH1() {
+            console.log(page)
+
+            document.querySelector(".h1-galleri").textContent = page.title.rendered
+        }
 
 document.addEventListener("DOMContentLoaded", hentJson);
 
@@ -10,6 +25,8 @@ async function hentJson() {
     posts = await jsonData.json();
     visPosts();
 }
+
+
 
 function visPosts() {
     console.log(posts);
@@ -29,7 +46,7 @@ function visPosts() {
 
 
 
-        klon.querySelector("[data-billede]").src = post.acf.billede.url
+        klon.querySelector("[data-billede]").src = post.acf.billede.url;
 
         klon.querySelector("img").addEventListener("click", () => {
             visModal(post);
@@ -84,6 +101,7 @@ function carousel() {
     x[myIndex - 1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
+
 
 
 
