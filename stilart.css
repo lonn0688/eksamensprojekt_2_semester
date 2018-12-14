@@ -59,7 +59,6 @@ article {
     margin: 7em 3em 3em 3em;
     padding: .3em 1.5em 1.5em 1.5em;
     background-color: whitesmoke;
-
 }
 
 .data-container {
@@ -68,8 +67,7 @@ article {
 }
 
 #modal {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
     position:fixed;
     letter-spacing: 1.5px;
     line-height: 1.5;
@@ -81,7 +79,11 @@ article {
     top: 10px;
     z-index: 1;
     overflow: scroll;
+    grid-template-columns: repeat 1fr;
+    display: grid;
 }
+
+
 
 #modal h2 {
     text-align: center;
@@ -162,7 +164,6 @@ Nav a:hover {
 }
 
 nav .menu-item {
-
     font-family: 'Covered By Your Grace', serif;
     border: none;
     color: black;
@@ -210,6 +211,8 @@ nav .menu-item {
     cursor: pointer;
 }
 
+
+
 .highlightindex {
     padding: 5px 10px;
     background: linear-gradient(to right, transparent, rgba(0, 0, 0, 7), transparent);
@@ -250,6 +253,43 @@ video {
     width: 100%;
 }
 
+
+/* !!!!!!!!!!!! Burgermenu !!!!!!!!!! */
+
+.burger {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+.burger-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.burger1, .burger2, .burger3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .burger1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .burger2 {
+  opacity: 0;
+}
+
+.change .burger3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
 /* !!!!!!!!!!!!! OM !!!!!!!!!!!! */
 
 .om {
@@ -273,7 +313,6 @@ video {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         display: grid;
-
     }
 
     article {
@@ -281,8 +320,7 @@ video {
     }
 
     #modal {
-        width: 100vw;
-        height: 100vw;
+
     }
 
     #modal h2 {
@@ -322,11 +360,14 @@ video {
     #modal {
     width: 100vw;
     height: 100vh;
-
-      margin: auto;
+    margin: auto;
     }
 
     .modal-txt {
         font-size: .35em;
+    }
+
+    .burger-container {
+        display: none;
     }
 }
