@@ -13,7 +13,7 @@ header {
 }
 
 .banner img {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
 
 body,
@@ -35,15 +35,15 @@ button a {
 
 h1 {
     font-family: 'covered by your grace';
-    color: white;
+    color: grey;
     font-size: 5em;
     margin: 0;
     text-align: center;
 }
 
 p {
-    color: white;
-    font-family: century gothic, sans-serif;
+    color: grey;
+    font-family: 'century gothic pro', sans-serif;
 
 }
 
@@ -115,7 +115,7 @@ article {
     padding-left: 1px;
     border: 2px solid black;
     padding: 1em;
-    font-family: century gothic, sans-serif;
+    font-family: 'century gothic pro', sans-serif;
     position:relative;
 }
 
@@ -232,7 +232,7 @@ nav .menu-item {
     margin-right: auto;
     margin-bottom: 50px;
     width: 50%;
-    border: 10px solid white;
+    border: 10px solid grey;
     position: relative;
     top: 60px;
     bottom: 100px;
@@ -243,6 +243,7 @@ nav .menu-item {
     color: gray;
     position: relative;
     top: 60px;
+    font-size: 10px;
 }
 
 /*Youtube video*/
@@ -335,9 +336,12 @@ nav .menu-item {
         font-size: .35em;
     }
     .video{
-        margin: auto;
-    padding: 10px;
+    margin: auto;
+    padding: auto;
     width: 60%;
+
     }
 
 }
+
+
