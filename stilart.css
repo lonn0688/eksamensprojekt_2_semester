@@ -148,10 +148,14 @@ nav {
     color: white;
     text-align: center;
     font-size: 30px;
-    margin-top: 50px;
     opacity: 0.9;
     transition: 0.3s;
     background: linear-gradient(to right, transparent, rgba(255, 255, 255), transparent);
+    max-height: 0;
+}
+
+nav.show {
+    max-height: 500px;
 }
 
 Nav a {
@@ -256,16 +260,10 @@ video {
 
 /* !!!!!!!!!!!! Burgermenu !!!!!!!!!! */
 
-.burger {
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0;
-}
-
 .burger-container {
   display: inline-block;
   cursor: pointer;
+margin: 4em 0 1em 3em
 }
 
 .burger1, .burger2, .burger3 {
@@ -369,5 +367,10 @@ video {
 
     .burger-container {
         display: none;
+    }
+
+    nav {
+        max-height: 200px;
+        margin-top: 4em;
     }
 }
