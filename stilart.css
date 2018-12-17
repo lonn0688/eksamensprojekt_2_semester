@@ -23,7 +23,7 @@ html {
 
 body {
     background-color: black;
-    background-image: url(baggrundspletter-01.png);
+    background-image: url(baggrundsbilled.png);
 }
 
 button a {
@@ -167,7 +167,7 @@ Nav a {
 }
 
 Nav a:hover {
-    color: red;
+    color:hotpink;
     text-decoration: none;
 }
 
@@ -234,8 +234,8 @@ nav .menu-item {
     background-color: transparent;
 }
 
-.menu .menu-item:hover {
-    color: red;
+.filtrering .menu-item:hover {
+    color: hotpink;
     cursor: pointer;
 }
 
