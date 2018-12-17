@@ -5,9 +5,6 @@ img {
 
 
 
-
-
-
 header {
     text-align: center;
 }
@@ -56,8 +53,7 @@ button a {
     text-align: center;
     font-family: 'Covered By Your Grace', serif;
     font-size: 5em;
-    margin: 0;
-    margin-top: .8em;
+    margin: .8em 0em;
 }
 
 /*mette's*/
@@ -175,6 +171,28 @@ Nav a:hover {
     text-decoration: none;
 }
 
+.menu-item {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: 'century gothic pro', sans-serif;
+    font-size: 150%;
+    margin: 0 3%;
+}
+
+.filtrering {
+    text-align: center;
+}
+
+.filtrering .menu-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.filtrering .menu-item:focus {
+    text-decoration: underline;
+}
+
 nav .menu-item {
     font-family: 'Covered By Your Grace', serif;
     border: none;
@@ -187,7 +205,7 @@ nav .menu-item {
     background-color: transparent;
 }
 
-.filtrering {
+.menu {
 
     font-family: 'Covered By Your Grace', serif;
     color: white;
@@ -203,9 +221,7 @@ nav .menu-item {
 }
 
 
-
-
-.filtrering .menu-item {
+.menu .menu-item {
 
     font-family: 'Covered By Your Grace', serif;
     border: none;
@@ -218,7 +234,7 @@ nav .menu-item {
     background-color: transparent;
 }
 
-.filtrering .menu-item:hover {
+.menu .menu-item:hover {
     color: red;
     cursor: pointer;
 }
@@ -253,6 +269,10 @@ nav .menu-item {
     position: relative;
     top: 60px;
     font-size: 10px;
+}
+
+.current {
+  text-decoration: underline;
 }
 
 /*Youtube video*/

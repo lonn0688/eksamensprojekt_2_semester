@@ -1,5 +1,4 @@
-let dest = document.querySelector("[data-container]");
-let posts = [];
+let dest = document.querySelector("[data-container]"), posts, prisFilter = "priskategori";
 let page = [];
 let modal = document.querySelector("#modal");
 
@@ -26,7 +25,15 @@ async function hentJson() {
     visPosts();
 }
 
+document.querySelectorAll(".menu-item").forEach(knap => {
+    knap.addEventListener("click", filtrering)
+});
 
+function filtrering() {
+    dest.textContent = "";
+    prisFilter=this.getAttribute("data-priskategori");
+    visPosts();
+}
 
 function visPosts() {
     console.log(posts);
@@ -36,15 +43,10 @@ function visPosts() {
 
     let postContainer = document.querySelector("[data-container]");
 
+    document.querySelector("h3").textContent = prisFilter;
     posts.forEach(post => {
-        let klon = temp.cloneNode(true).content;
-        /*klon.querySelector("[data-title]").textContent = post.title.rendered
-
-        klon.querySelector("[data-text]").innerHTML = post.content.rendered
-
-        klon.querySelector("[data-pris]").textContent = ("Pris: ") + post.acf.pris + (",-")*/
-
-
+        if (post.acf.priskategori==prisFilter || prisFilter=="priskategori"){
+            let klon = temp.cloneNode(true).content;
 
         klon.querySelector("[data-billede]").src = post.acf.billede.url;
 
@@ -52,10 +54,9 @@ function visPosts() {
             visModal(post);
         });
 
-        /* if (post.acf.mål) { klon.querySelector("[data-maal]").textContent = ("Mål: ") + post.acf.mål }*/
-
-
         postContainer.appendChild(klon);
+
+        }
 
 
     });
