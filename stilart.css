@@ -61,7 +61,23 @@ article {
 
   margin: 7em 3em 3em 3em;
     padding: .3em 1.5em 1.5em 1.5em;
-    background-color: white;
+ background-color: white;
+}
+
+article:hover {
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .2s;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+article img:hover {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    transition: 2s;
+    cursor: pointer;
 }
 
 .data-container {
@@ -98,13 +114,18 @@ article {
 
 #modal button {
     font-family: 'Covered By Your Grace', serif;
-    background-color: transparent;
-    color: grey;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 3em;
     border: none;
+    padding: .5em;
+    margin: 0 auto .5em auto;
+}
+
+#modal button {
+    cursor: pointer;
 }
 
 #modal-content {
@@ -157,8 +178,7 @@ nav {
     overflow: hidden;
     width: 70%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0em auto 1em auto;
 }
 
 nav.show {
@@ -237,13 +257,22 @@ nav .menu-item {
 
 #footer {
     text-align: center;
-    color: grey;
-    position: relative;
-    top: 60px;
-    font-size: 10px;
+
 }
 
+#footer img{
+    width: 2.5%;
+    margin: 2em;
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
 
+#footer img:hover {
+-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
 
 /*Youtube video*/
 .hs-responsive-embed-youtube {
@@ -259,13 +288,13 @@ nav .menu-item {
 .burger-container {
   display: inline-block;
   cursor: pointer;
-margin: 4em 0 1em 3em
+margin: 4em 0 1em 3em;
 }
 
 .burger1, .burger2, .burger3 {
   width: 35px;
   height: 5px;
-  background-color: grey;
+  background-color: white;
   margin: 6px 0;
   transition: 0.4s;
 }
