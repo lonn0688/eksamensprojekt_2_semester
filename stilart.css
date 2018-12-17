@@ -80,6 +80,10 @@ article img:hover {
     cursor: pointer;
 }
 
+.om:hover{
+    cursor: auto;
+}
+
 .data-container {
     margin: 0 auto;
     display: grid;
