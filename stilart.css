@@ -38,6 +38,10 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    display: none;
+}
+
 p {
     color: grey;
     font-family: 'century gothic pro', sans-serif;
@@ -48,12 +52,8 @@ button a {
     text-decoration: none;
 }
 
-.h1-galleri {
-    color: grey;
-    text-align: center;
-    font-family: 'Covered By Your Grace', serif;
-    font-size: 5em;
-    margin: .8em 0em;
+.forsidenav {
+    margin-top: 4em;
 }
 
 /*mette's*/
@@ -185,15 +185,16 @@ nav a:hover {
 
 .filtrering {
     text-align: center;
+
 }
 
 .filtrering .menu-item:hover {
     cursor: pointer;
-    color: #008000;
+    color: grey;
 }
 
 .filtrering .menu-item:focus {
-    color: #008000;
+    color:grey;
 }
 
 nav .menu-item {
@@ -202,7 +203,6 @@ nav .menu-item {
     color: black;
     text-align: center;
     font-size: 30px;
-    margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
     background-color: transparent;
@@ -217,7 +217,6 @@ nav .menu-item {
     color: black;
     text-align: center;
     font-size: 30px;
-    margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
     background-color: transparent;
@@ -375,8 +374,13 @@ margin: 4em 0 1em 3em
 
     nav {
         max-height: 200px;
-        margin-top: 4em;
-        width: 50%
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        width: 50%;
+    }
+
+    .filtrering {
+        margin-top: 2em;
     }
 
     .video{
@@ -392,7 +396,6 @@ margin: 4em 0 1em 3em
 .current {
     font-family: 'Covered By Your Grace', serif;
     border: none;
-    color: #008000;
     text-align: center;
     font-size: 30px;
     margin: 4px 2px;
