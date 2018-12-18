@@ -1,5 +1,9 @@
+/* Hvor værkerne bliver vist i og variabel, der viser hvad der filtreres på */
 let dest = document.querySelector("[data-container]"), posts, prisFilter = "priskategori";
+/* Tom variabel til indlæsning af personer */
 let page = [];
+
+
 let modal = document.querySelector("#modal");
 
 
@@ -17,8 +21,10 @@ let modal = document.querySelector("#modal");
             document.querySelector(".h1-galleri").textContent = page.title.rendered
         }
 
+/* Når dom er loadet, begynder funktionen hentJson */
 document.addEventListener("DOMContentLoaded", hentJson);
 
+/* Funktionen, der henter Json */
 async function hentJson() {
     let jsonData = await fetch("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/multiple-post-type?&type[]=malerier&type[]=print&type[]=brugskunst&per_page=50");
     posts = await jsonData.json();
@@ -29,12 +35,14 @@ document.querySelectorAll(".menu-item").forEach(knap => {
     knap.addEventListener("click", filtrering)
 });
 
+/* Når Json er hentet, starter funktionen filtrering */
 function filtrering() {
     dest.textContent = "";
     prisFilter=this.getAttribute("data-priskategori");
     visPosts();
 }
 
+/* Derefter begynder funktionen visPosts, hvor det valgte indhold fra Json bliver vist */
 function visPosts() {
     console.log(posts);
     let dest = document.querySelector("[data-container]"),
@@ -109,6 +117,7 @@ function carousel() {
 
 // BURGER
 
+/* Funktionen, der får de tre streger til at vende sig til et kryds og vise menuen */
 function burgerFunction(x) {
     x.classList.toggle("change");
      document.querySelector("nav").classList.toggle("show");

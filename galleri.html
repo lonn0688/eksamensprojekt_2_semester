@@ -9,6 +9,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
 
+     <link rel="icon" href="favicon-16x16.png" type="image" sizes="16x16">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
 
     <title>Galleri</title>
 
@@ -25,6 +28,8 @@
 
 <h1 class="h1-galleri"></h1>
 
+
+<!-- De 3 streger i burgermenuen, som på klik starter funktionen burgerFunction: -->
 <div class="burger-container" onclick="burgerFunction(this)">
 <div class="burger1"></div>
 <div class="burger2"></div>
@@ -35,13 +40,13 @@
    <h3 class="pris"></h3>
 
     <nav class="menu">
-        <button class="menu-item" data-nr="forside"><a href="index_forside.html">Forside</a></button>
+        <button class="menu-item" data-nr="forside"><a href="index.html">Forside</a></button>
         <button class="current" ><a href="galleri.html">Se Galleri</a></button>
         <button class="menu-item" data-nr="om"><a href="om.html">Om</a></button>
         </nav>
 
 
-
+        <!-- knapper til filtrering -->
         <div class="filtrering">
         <button class="menu-item" data-priskategori="priskategori">Alle værker</button>
 
@@ -50,7 +55,7 @@
         <button class="menu-item" data-priskategori="500kr - 2999kr">500kr - 2999kr</button>
 
         <button class="menu-item" data-priskategori="3000kr - ?">+ 3000kr</button>
-    </div>
+        </div>
 
     <main>
 
@@ -69,11 +74,11 @@
         </section>
 
 
-
+        <!-- En container, der viser alle værker: -->
         <section class="container-data container" data-container>
-
         </section>
 
+        <!-- En skabelon til hvordan hvert værk skal vises samt hvilken information om værket, der skal vises: -->
         <template data-template>
             <article class="postListview">
                 <img data-billede class="data-billede" src="" alt="">
@@ -92,7 +97,13 @@
     </script>
 
     <div id="footer">
-        <p>Sandra Wolff</p>
+
+        <a href="https://www.facebook.com/Wolffs-World-188091895445682/"><img src="Facebook_Home_logo_old.svg.png" alt="facebook"></a>
+
+        <a href="https://www.instagram.com/sandrawolffworld/"><img src="iconfinder_instagram-logo-color_1620007.png" alt="instagram"></a>
+
+        <a href="https://www.youtube.com/channel/UCfUmnhbnbMVVmTjDeIWCjBg"><img src="580b57fcd9996e24bc43c545.png" alt="youtube"></a>
+
     </div>
 
 
