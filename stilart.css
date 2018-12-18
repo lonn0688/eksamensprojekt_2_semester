@@ -104,6 +104,9 @@ article img:hover {
     overflow: scroll;
     grid-template-columns: repeat 1fr;
     display: grid;
+    transition: 1s;
+            background-color: rgba(0, 0, 0, .7);
+    top: 0;
 }
 
 
@@ -170,6 +173,7 @@ article img:hover {
         display: grid;
 }
 
+/* nav har i mobil og tablet en max-height på 0 for at menuen ikke vises, når burgermenuen er der */
 nav {
     font-family: 'Covered By Your Grace', serif;
     color: white;
@@ -185,6 +189,7 @@ nav {
     margin: 0em auto 1em auto;
 }
 
+/* Når der klikkes på burgeren starter funktionen i javascript, som henter nav.show og gør den synlig med max-height */
 nav.show {
     max-height: 500px;
 }
@@ -246,8 +251,8 @@ nav .menu-item {
     background-color: transparent;
 }
 
+/* Styling af slides. Ramme, center align osv */
 .section {
-    /* border rundt om slide på forsiden*/
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -289,12 +294,15 @@ nav .menu-item {
 
 /* !!!!!!!!!!!! Burgermenu !!!!!!!!!! */
 
+
+/* Styling til alle streger/containeren */
 .burger-container {
   display: inline-block;
   cursor: pointer;
 margin: 4em 0 1em 3em;
 }
 
+/* Styling af hver enkel streg */
 .burger1, .burger2, .burger3 {
   width: 35px;
   height: 5px;
@@ -303,15 +311,18 @@ margin: 4em 0 1em 3em;
   transition: 0.4s;
 }
 
+/* rotering af den ene streg så der til sidst formes et kryds */
 .change .burger1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
   transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 
+/* en streg forsvinder */
 .change .burger2 {
   opacity: 0;
 }
 
+/* rotering af den ene streg så der til sidst formes et kryds */
 .change .burger3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
   transform: rotate(45deg) translate(-8px, -8px) ;
@@ -346,10 +357,6 @@ margin: 4em 0 1em 3em;
 
     article {
         padding: .5em;
-    }
-
-    #modal {
-
     }
 
     #modal h2 {
@@ -400,7 +407,7 @@ margin: 4em 0 1em 3em;
         font-size: .35em;
     }
 
-
+/* For at burgermenuen ikke vises i på desktop har den en display:none */
     .burger-container {
         display: none;
     }
