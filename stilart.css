@@ -3,7 +3,9 @@ img {
     height: auto;
 }
 
-
+.kontaktMig {
+    margin-top: 3em;
+}
 
 header {
     text-align: center;
@@ -222,7 +224,7 @@ nav a:hover {
     color: grey;
 }
 
-.filtrering .menu-item:focus {
+.filtrering .menu-item:active {
     color:grey;
 }
 
