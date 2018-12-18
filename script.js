@@ -1,5 +1,6 @@
 /* Hvor værkerne bliver vist i og variabel, der viser hvad der filtreres på */
-let dest = document.querySelector("[data-container]"), posts, prisFilter = "priskategori";
+let dest = document.querySelector("[data-container]"),
+    posts, prisFilter = "priskategori";
 /* Tom variabel til indlæsning af personer */
 let page = [];
 
@@ -7,19 +8,19 @@ let page = [];
 let modal = document.querySelector("#modal");
 
 
-    document.addEventListener("DOMContentLoaded", hentJson2);
+document.addEventListener("DOMContentLoaded", hentJson2);
 
-        async function hentJson2() {
-            let jsonData2 = await fetch("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/posts/93");
-            page = await jsonData2.json();
-            visGalleriH1();
-        }
+async function hentJson2() {
+    let jsonData2 = await fetch("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/posts/93");
+    page = await jsonData2.json();
+    visGalleriH1();
+}
 
-        function visGalleriH1() {
-            console.log(page)
+function visGalleriH1() {
+    console.log(page)
 
-            document.querySelector(".h1-galleri").textContent = page.title.rendered
-        }
+    document.querySelector(".h1-galleri").textContent = page.title.rendered
+}
 
 /* Når dom er loadet, begynder funktionen hentJson */
 document.addEventListener("DOMContentLoaded", hentJson);
@@ -38,7 +39,7 @@ document.querySelectorAll(".menu-item").forEach(knap => {
 /* Når Json er hentet, starter funktionen filtrering */
 function filtrering() {
     dest.textContent = "";
-    prisFilter=this.getAttribute("data-priskategori");
+    prisFilter = this.getAttribute("data-priskategori");
     visPosts();
 }
 
@@ -53,16 +54,17 @@ function visPosts() {
 
     document.querySelector("h3").textContent = prisFilter;
     posts.forEach(post => {
-        if (post.acf.priskategori==prisFilter || prisFilter=="priskategori"){
+        if (post.acf.priskategori == prisFilter || prisFilter == "priskategori") {
             let klon = temp.cloneNode(true).content;
 
-        klon.querySelector("[data-billede]").src = post.acf.billede.url;
+            klon.querySelector("[data-billede]").src = post.acf.lilleBillede.url;
 
-        klon.querySelector("img").addEventListener("click", () => {
-            visModal(post);
-        });
+            klon.querySelector(".data-pris").textContent = ("Pris: ") + post.acf.pris + (",-")
+            klon.querySelector("img").addEventListener("click", () => {
+                visModal(post);
+            });
 
-        postContainer.appendChild(klon);
+            postContainer.appendChild(klon);
 
         }
 
@@ -109,7 +111,7 @@ function carousel() {
         myIndex = 1
     }
     x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 5000); // Change image every 2 seconds
+    setTimeout(carousel, 3500); // Change image every 2 seconds
 }
 
 
@@ -121,7 +123,5 @@ function carousel() {
 /* Funktionen, der får de tre streger til at vende sig til et kryds og vise menuen */
 function burgerFunction(x) {
     x.classList.toggle("change");
-     document.querySelector("nav").classList.toggle("show");
+    document.querySelector("nav").classList.toggle("show");
 }
-
-

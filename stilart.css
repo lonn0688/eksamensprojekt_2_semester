@@ -36,8 +36,12 @@ h1 {
     font-family: 'covered by your grace';
     color: grey;
     font-size: 5em;
-    margin: 0;
+    margin: .5em 0 0 0;
     text-align: center;
+}
+
+.h1-galleri {
+    margin-top: 1.1em;
 }
 
 h3 {
@@ -54,15 +58,10 @@ button a {
     text-decoration: none;
 }
 
-.forsidenav {
-    margin-top: 4em;
-}
-
-/*mette's*/
+/*Mettes*/
 article {
-
-  margin: 7em 3em 3em 3em;
-    padding: .3em 1.5em 1.5em 1.5em;
+  margin: 3em;
+    padding: .5em .5em .2em .5em;
  background-color: white;
 }
 
@@ -80,6 +79,13 @@ article img:hover {
 	transform: scale(1.3);
     transition: 2s;
     cursor: pointer;
+}
+
+.data-txt {
+    font-family: 'century gothic pro', sans-serif;
+    color: grey;
+    text-align: right;
+    margin: .1em;
 }
 
 .om:hover{
@@ -140,7 +146,7 @@ article img:hover {
 #modal-content {
     width: auto;
     height: auto;
-    background-color: mistyrose;
+    background-color: grey;
     padding-left: 1px;
     border: 2px solid black;
     padding: 1em;
@@ -154,7 +160,7 @@ article img:hover {
 }
 
 .modal-txt {
-    padding: 0em 4em;
+    margin: 0em 4em;
     color: black;
 }
 
@@ -224,25 +230,11 @@ nav a:hover {
     color: grey;
 }
 
-.filtrering .menu-item:active {
+.filtrering .menu-item:focus {
     color:grey;
 }
 
 nav .menu-item {
-    font-family: 'Covered By Your Grace', serif;
-    border: none;
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    opacity: 0.6;
-    transition: 0.3s;
-    background-color: transparent;
-}
-
-
-
-.menu .menu-item {
-
     font-family: 'Covered By Your Grace', serif;
     border: none;
     color: black;
@@ -302,7 +294,7 @@ nav .menu-item {
 .burger-container {
   display: inline-block;
   cursor: pointer;
-margin: 4em 0 1em 3em;
+margin: 1em 0 1em 3em;
 }
 
 /* Styling af hver enkel streg */
@@ -356,10 +348,6 @@ margin: 4em 0 1em 3em;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         display: grid;
-    }
-
-    article {
-        padding: .5em;
     }
 
     #modal h2 {
@@ -423,7 +411,7 @@ margin: 4em 0 1em 3em;
     }
 
     .filtrering {
-        margin-top: 2em;
+        margin-top: 4em;
     }
 
     .video{
