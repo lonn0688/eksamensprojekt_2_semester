@@ -94,6 +94,7 @@ function skjulModal() {
     modal.classList.remove("vis");
 }
 
+/* Får slideshowet til at skifte */
 let myIndex = 0;
 carousel();
 
