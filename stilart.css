@@ -161,7 +161,7 @@ article:hover {
 }
 
 .modal-txt {
-    margin: 0em 4em;
+    margin: 1em;
     color: black;
 }
 
@@ -422,7 +422,17 @@ margin: 1em 0 1em 3em;
 
     }
 
+    /* #modal img {
+        width: 75%;
+        height: auto;
+        display: block;
+        margin: 0 auto 1em auto;
+    }*/
 
+    #modal-content {
+        width: 30%;
+        height: auto;
+    }
 }
 
 .current {
