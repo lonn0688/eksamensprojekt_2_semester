@@ -59,7 +59,7 @@ function visPosts() {
 
             klon.querySelector("[data-billede]").src = post.acf.lilleBillede.url;
 
-            klon.querySelector(".data-pris").textContent = ("Pris: ") + post.acf.pris + (",-")
+            klon.querySelector(".data-pris").textContent = post.acf.pris + (",-")
             klon.querySelector("img").addEventListener("click", () => {
                 visModal(post);
             });
