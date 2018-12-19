@@ -111,13 +111,12 @@ function carousel() {
         myIndex = 1
     }
     x[myIndex - 1].style.display = "block";
-<<<<<<< HEAD
-    setTimeout(carousel, 15000); // Change image every 2 seconds
-=======
-    setTimeout(carousel, 3500); // Change image every 2 seconds
->>>>>>> origin/master
-}
 
+    setTimeout(carousel, 15000); // Change image every 2 seconds
+
+    setTimeout(carousel, 3500); // Change image every 2 seconds
+
+}
 
 
 
@@ -129,3 +128,5 @@ function burgerFunction(x) {
     x.classList.toggle("change");
     document.querySelector("nav").classList.toggle("show");
 }
+
+

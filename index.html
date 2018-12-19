@@ -55,6 +55,11 @@
 
 
 
+        <div class="footer">
+            <p data-text></p>
+        </div>
+
+
 
     <div id="footer">
       <a href="https://www.facebook.com/Wolffs-World-188091895445682/"><img src="Facebook_Home_logo_old.svg.png" alt="facebook"></a>
@@ -98,6 +103,25 @@ function burgerFunction(x) {
     x.classList.toggle("change");
     document.querySelector("nav").classList.toggle("show");
 }
+
+
+let page;
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let jsonData = await fetch("http://metteskovnielsen.dk/kea/eksamen-2-semester/wordpress/wp-json/wp/v2/posts/319");
+            page = await jsonData.json();
+            visFooter();
+        }
+
+        function visFooter() {
+            console.log(page)
+
+            document.querySelector("[data-text]").innerHTML = page.excerpt.rendered;
+
+        }
+
     </script>
 
 
