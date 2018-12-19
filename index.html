@@ -19,7 +19,7 @@
 <body>
 
     <header>
-        <div class="banner"> <img src="nybanner14dec-01.png" alt="banner" height="230px;" width="1200px;"></div>
+        <a href="index.html"><div class="banner"> <img src="nybanner14dec-01.png" alt="banner" height="230px;" width="1200px;"></div></a>
     </header>
 
 <div class="burger-container" onclick="burgerFunction(this)">
@@ -31,7 +31,7 @@
 <nav class="forsidenav">
         <button class="current" data-nr="alle"><a href="index.html">Forside</a></button>
 
-        <button class="menu-item" data-kategori="alle"><a href="galleri.html">Se galleri</a></button>
+        <button class="menu-item" data-kategori="alle"><a href="galleri.html">Galleri</a></button>
        <button class="menu-item" data-kategori="alle"><a href="om.html">Om</a></button>
 
 
@@ -56,14 +56,6 @@
 
 
 
-
-
-
-
-
-
-    <script src="script.js"></script>
-
     <div id="footer">
       <a href="https://www.facebook.com/Wolffs-World-188091895445682/"><img src="Facebook_Home_logo_old.svg.png" alt="facebook"></a>
 
@@ -71,6 +63,44 @@
 
         <a href="https://www.youtube.com/channel/UCfUmnhbnbMVVmTjDeIWCjBg"><img src="580b57fcd9996e24bc43c545.png" alt="youtube"></a>
     </div>
+
+
+
+
+
+    <script>
+    /* Får slideshowet til at skifte */
+let myIndex = 0;
+carousel();
+
+function carousel() {
+    let i;
+    let x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+        myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 3500); // Change image every 2 seconds
+}
+
+
+
+
+
+// BURGER
+
+/* Funktionen, der får de tre streger til at vende sig til et kryds og vise menuen */
+function burgerFunction(x) {
+    x.classList.toggle("change");
+    document.querySelector("nav").classList.toggle("show");
+}
+    </script>
+
+
 
 
 
